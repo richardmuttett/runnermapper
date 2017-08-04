@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "com.muttett.mapper"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "TEST_MODE", "false"
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.firebase:firebase-client-android:2.4.0'
+}
